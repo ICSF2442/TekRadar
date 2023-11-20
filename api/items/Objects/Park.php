@@ -151,7 +151,7 @@ class Park{
             while($row = $query->fetch_array(MYSQLI_ASSOC)){
                 // para cada id irá instanciar um objeto User através daquele id que, por sua vez, irá buscar os dados
                 // necessários para construir o objeto
-                $ret[] = new User($row["id"]);
+                $ret[] = new Park($row["id"]);
             }
         }
         //var_dump($ret);
