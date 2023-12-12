@@ -1,5 +1,5 @@
 <?php
-
+namespace Objects;
 use Cassandra\Blob;
 use Functions\Utils;
 use Functions\Database;

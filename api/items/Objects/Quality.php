@@ -1,5 +1,5 @@
 <?php
-
+namespace Objects;
 use Cassandra\Blob;
 use Functions\Utils;
 use Functions\Database;
@@ -9,19 +9,18 @@ class Quality{
 
     private ?string $name = null;
 
-    private  ?int $value = null;
+    private ?int $value = null;
 
     public function toArray(): array{
 
         $array = array("id" => $this->id,
-            "name"=> $this->name,
-            "value"=> $this->value);
+            "name"=> $this->name);
         return $array;
     }
 
     public function store(): void{
 
-        $fields = array("id","name","value");
+        $fields = array("id","name");
 
         if ($this->id == null) {
 
@@ -65,16 +64,13 @@ class Quality{
         }
     }
 
-    public static function find(int $id = null, string $name = null, int $value = null): int{
+    public static function find(int $id = null, string $name = null): int{
         $sql = "SELECT id FROM park WHERE 1=1";
         if($id != NULL){
             $sql .= " AND (id = $id)";
         }
         if($name != NULL){
             $sql .= " AND (name = '$name')";
-        }
-        if($value != NULL){
-            $sql .= " AND (gmaps_link = '$value')";
         }
 
         $query = Database::getConnection()->query($sql);
@@ -94,7 +90,7 @@ class Quality{
         }
     }
 
-    public static function search(int $id = null, string $name = null, string $value = null): array{
+    public static function search(int $id = null, string $name = null): array{
         // crias o comando sql principal
         $sql = "SELECT id FROM quality WHERE 1=1";
         // se passar um dado "id" então vai adicionar ao SQL uma parte dinamica: verificar se o id é igual ao id
@@ -104,9 +100,7 @@ class Quality{
         if($name != null){
             $sql .= " and (username = '$name')";
         }
-        if($value != null){
-            $sql .= " and (email = '$value')";
-        }
+
         // cria o array de retorno
         $ret = array();
         // executa o comando sql dinamico
@@ -125,6 +119,22 @@ class Quality{
         // retorno o array com os objetos, caso haja objetos
         return $ret;
 
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getValue(): ?int
+    {
+        return $this->value;
+    }
+
+    /**
+     * @param int|null $value
+     */
+    public function setValue(?int $value): void
+    {
+        $this->value = $value;
     }
 
 
@@ -161,22 +171,4 @@ class Quality{
     {
         $this->name = $name;
     }
-
-    /**
-     * @return int|null
-     */
-    public function getValue(): ?int
-    {
-        return $this->value;
-    }
-
-    /**
-     * @param int|null $value
-     */
-    public function setValue(?int $value): void
-    {
-        $this->value = $value;
-    }
-
-
 }
