@@ -1,4 +1,6 @@
 <?php
+require_once('./../../settings.php');
+
 
 // Importando classes ou funções necessárias
 use Functions\Utils;
@@ -25,9 +27,16 @@ if ($json == null) {
 
         // Calcula o parque ideal com base nos valores do utilizador usando a função calcularParkIdeal() da classe Utils
         $parkIdeal = Utils::calcularParkIdeal($valoresUser);
+        if ($parkIdeal == null){
+            $request->setError("Não foi possível obter o resultado!");
+            $request->setIsError(true);
+            // Emite a resposta de erro em formato JSON
+            echo($request->response(false));
+        }else{
+            echo($request->setResult($parkIdeal->toArray ())->response (false));
+        }
 
         // Define o resultado obtido no objeto $request e emite a resposta em formato JSON
-        echo($request->setResult($parkIdeal->toArray())->response(false));
     } else {
         // Se o campo "valoresUser" estiver ausente no JSON, configura uma mensagem de erro no objeto $request
         $request->setError("ERRO!");

@@ -7,7 +7,7 @@ use Functions\Database;
 class Park{
     private ?int $id = null;
 
-    private  ?Blob $logo = null;
+    private  ?string $logo = null;
 
     private ?string $name = null;
 
@@ -36,7 +36,6 @@ class Park{
     public function toArray(): array{
 
         $array = array("id" => $this->id,
-            "logo" => $this->logo,
             "name"=> $this->name,
             "description"=> $this->description,
             "gmaps_link"=>$this->gmaps_link);

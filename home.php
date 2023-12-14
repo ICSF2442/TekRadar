@@ -20,8 +20,8 @@
                 </div>
                 <div class="menu">
                         <button class="equipa" onclick="location.href='frontend/equipa/equipa.html'">A EQUIPA</button>
-                        <button class="parques" onclick="location.href='frontend/listaParque/parques.html'">PARQUES</button>
-                        <button class="pesquisa">PESQUISA</button>
+                        <button class="parques" onclick="location.href='frontend/listaParque/listaparques.html'">PARQUES</button>
+                        <button class="pesquisa" onclick="location.href='frontend/listaParque/pesquisa.html'">PESQUISA</button>
                 </div>
         </div>
 </head>
