@@ -1,0 +1,130 @@
+
+.div {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 46px 0 46px 51px;
+}
+
+.img-2 {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.div-9 {
+    position: relative;
+}
+
+.div-10 {
+    margin: 16px 0 46px;
+}
+
+@media (max-width: 991px) {
+    .div-10 {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+.div-11 {
+    gap: 20px;
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    .div-11 {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0px;
+    }
+}
+
+.column {
+    flex-direction: column;
+    line-height: normal;
+    width: 38%;
+    margin-left: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 991px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.div-12 {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 991px) {
+    .div-12 {
+        max-width: 100%;
+    }
+}
+
+.div-13 {
+    color: #353535;
+    text-align: center;
+    max-width: 414px;
+    border-radius: 28px;
+    border: 5px solid #3c6e71;
+    background-color: rgba(60, 110, 113, 0);
+    justify-content: center;
+    padding: 16px 16px;
+    margin-left:25px;
+    font: 700 30px Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+    .div-13 {
+        font-size: 40px;
+        max-width: 100%;
+        padding: 0 30px 0 28px;
+    }
+}
+
+.div-14 {
+    color: #353535;
+    align-self: left;
+    margin-left: 55px;
+    margin-top: 31px;
+    max-width: 403px;
+    font: 600 20px Inter, sans-serif;
+}
+
+.column-2 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 62%;
+    margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+    .column-2 {
+        width: 100%;
+    }
+}
+
+.img-3 {
+    aspect-ratio: 1.5;
+    object-fit: fill;
+    object-position: center;
+    width: 100%;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+@media (max-width: 991px) {
+    .img-3 {
+        max-width: 100%;
+    }
+}

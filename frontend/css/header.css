@@ -1,0 +1,130 @@
+.a:link,
+a:visited,
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.div_logo_titulo {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+}
+
+.logotipo {
+   
+    object-fit: contain;
+    object-position: center;
+    width: 160px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.titulo {
+    color: #2b4e65;
+    margin-top: 45px;
+    font: 700 28px Karantina, sans-serif;
+}
+
+
+.menu {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: auto 0;
+}
+
+.equipa {
+    color: #2b4e65;
+    background-color: white;
+    text-align: center;
+    flex-grow: 1;
+    white-space: nowrap;
+    margin: auto 0;
+    border: 0;
+    font: 600 15px Inter, sans-serif;
+
+}
+
+.equipa:hover {
+    color: #1e1e1e;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .equipa {
+        white-space: initial;
+    }
+}
+
+.parques {
+    color: #2b4e65;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 5px;
+    border: solid #2b4e65;
+    background-color: white;
+    align-self: stretch;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 15px;
+    font: 600 15px Inter, sans-serif;
+}
+
+.parques:hover {
+    background-color: #2b4e65;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .parques {
+        white-space: initial;
+        padding: 0 20px;
+    }
+}
+
+.pesquisa {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-color: #2b4e65;
+    text-align: center;
+    position: relative;
+    white-space: nowrap;
+    fill: #2b4e65;
+    overflow: hidden;
+    align-self: stretch;
+    aspect-ratio: 3.3;
+    justify-content: center;
+    padding: 15px;
+    font: 600 15px Inter, sans-serif;
+    border-radius: 5px;
+    border: solid #2b4e65;
+    flex-grow: 1;
+    margin-right:15px;
+
+}
+
+.pesquisa:hover {
+    color: #2b4e65;
+    background-color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .pesquisa {
+        white-space: initial;
+        padding: 0 20px;
+    }
+}

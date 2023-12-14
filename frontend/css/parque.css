@@ -1,0 +1,133 @@
+.div-9 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    min-height: 274px;
+    width: 100%;
+    align-items: start;
+    padding: 26px 80px 16px 40px;
+}
+
+.img-2 {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 90%;
+}
+
+.div-10 {
+    position: relative;
+    color: #3c6e71;
+    max-width: 639px;
+    font: 700 30px Inter, sans-serif;
+}
+
+.div-11 {
+    position: relative;
+    color: #000;
+    margin-top: 11px;
+    max-width: 639px;
+    font: 400 20px Inter, sans-serif;
+    margin-top:50px;
+}
+
+
+.div-12 {
+    position: relative;
+    color: #000;
+    margin-top: 23px;
+    max-width: 594px;
+    font: 400 20px Inter, sans-serif;
+}
+
+.div-13 {
+    position: relative;
+    color: #000;
+    margin-top: 17px;
+    white-space: nowrap;
+    font: 400 20px Inter, sans-serif;
+}
+
+.div-14 {
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    width: 210px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.img-3 {
+    aspect-ratio: 1.11;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    overflow: hidden;
+    flex: 1;
+}
+
+.img-4 {
+    aspect-ratio: 1.1;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    overflow: hidden;
+    flex: 1;
+    margin: auto 0;
+}
+
+.img-5 {
+    aspect-ratio: 1.11;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    overflow: hidden;
+    flex: 1;
+}
+
+.div-15 {
+    align-self: center;
+    width: 100%;
+    max-width: 1216px;
+    margin: 26px 0 72px;
+}
+
+.div-16 {
+    gap: 20px;
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 59%;
+    margin-left: 0px;
+}
+
+.div-17 {
+    color: #000;
+    margin-top: 5px;
+    font: 400 20px Inter, sans-serif;
+    padding-left: 40px;
+}
+
+.column-2 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 41%;
+    margin-left: 20px;
+}
+
+.img-6 {
+    aspect-ratio: 1.34;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    overflow: hidden;
+}
