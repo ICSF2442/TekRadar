@@ -4,15 +4,18 @@ namespace Objects;
 
 class RequestResponse
 {
-
+    // Variável para armazenar o resultado da requisição
     private mixed $result = null;
 
+    // Variável para indicar se há um erro na resposta (true = erro, false = sem erro)
     private ?bool $isError = false;
 
+    // Mensagem de erro, caso haja algum
     private ?string $error = null;
-    
+
     /**
-     * @return mixed
+     * Obtém o resultado da requisição
+     * @return mixed - Pode ser de qualquer tipo
      */
     public function getResult(): mixed
     {
@@ -20,7 +23,9 @@ class RequestResponse
     }
 
     /**
-     * @param mixed $result
+     * Define o resultado da requisição
+     * @param mixed $result - Pode ser de qualquer tipo
+     * @return RequestResponse - A própria instância para permitir encadeamento de métodos
      */
     public function setResult(mixed $result): RequestResponse
     {
@@ -29,7 +34,8 @@ class RequestResponse
     }
 
     /**
-     * @return bool|null
+     * Obtém o status de erro da requisição
+     * @return bool|null - True se houver erro, false se não houver, null se não estiver definido
      */
     public function getIsError(): ?bool
     {
@@ -37,19 +43,23 @@ class RequestResponse
     }
 
     /**
-     * @param bool|null $isError
+     * Define o status de erro da requisição
+     * @param bool|null $isError - True se houver erro, false se não houver, null para não definido
+     * @return RequestResponse - A própria instância para permitir encadeamento de métodos
      */
     public function setIsError(?bool $isError): RequestResponse
     {
         $this->isError = $isError;
-        if(!$isError){
+        // Se não houver erro, define a mensagem de erro como nula
+        if (!$isError) {
             $this->error = null;
         }
         return $this;
     }
 
     /**
-     * @return string|null
+     * Obtém a mensagem de erro
+     * @return string|null - A mensagem de erro, se houver, ou null se não houver erro
      */
     public function getError(): ?string
     {
@@ -57,18 +67,25 @@ class RequestResponse
     }
 
     /**
-     * @param string|null $error
+     * Define a mensagem de erro
+     * @param string|null $error - A mensagem de erro ou null para limpar a mensagem atual
+     * @return RequestResponse - A própria instância para permitir encadeamento de métodos
      */
     public function setError(?string $error): RequestResponse
     {
         $this->error = $error;
-        if(!$error){
+        // Se não houver erro, define a mensagem de erro como nula
+        if (!$error) {
             $this->error = null;
         }
         return $this;
     }
 
-
+    /**
+     * Retorna a representação da resposta em formato JSON
+     * @param bool $print - Indica se deve imprimir a resposta ou apenas retornar como string
+     * @return string|bool - Se $print for true, imprime a resposta e retorna JSON, caso contrário, retorna o JSON como string
+     */
     public function response(bool $print = true): string|bool
     {
         $json = json_encode(array(
@@ -76,10 +93,10 @@ class RequestResponse
             "isError" => $this->isError,
             "error" => $this->error
         ));
-        if($print) echo $json;
-        return $json;
+        // Se $print for true, imprime o JSON
+        if ($print) {
+            echo $json;
+        }
+        return $json; // Retorna o JSON como string
     }
-    
-
-
 }

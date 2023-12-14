@@ -15,6 +15,7 @@ class Park{
 
     private ?string $gmaps_link = null;
 
+    // O construtor da classe Park. Se fornecido um ID, ele busca as informações do parque na base de dados.
     public function __construct(int $id = null)
     {
         if ($id != null && Database::getConnection() != null) {
@@ -31,6 +32,7 @@ class Park{
             }
         }
     }
+    // Converte os dados do objeto Park para um array associativo
     public function toArray(): array{
 
         $array = array("id" => $this->id,
@@ -42,6 +44,7 @@ class Park{
 
     }
 
+    // Armazena ou atualiza os dados do parque na base de dados
     public function store(): void{
 
         $fields = array("id","logo","name","description","gmaps_link");
@@ -87,6 +90,7 @@ class Park{
         }
     }
 ///        $fields = array("id","logo","name","description","gmaps_link");
+///     Metodo para verificar se existe o parque na base de dados
     public static function find(int $id = null, string $logo = null, string $name = null, string $description = null, string $gmaps_link = null): int{
         $sql = "SELECT id FROM park WHERE 1=1";
         if($id != NULL){
@@ -113,7 +117,7 @@ class Park{
             return 0;
         }
     }
-
+    //Metodo para remover um parque da base de dados dando o seu id.
     public static function remover(int $id): void
     {
         if ($id != null){
@@ -121,7 +125,7 @@ class Park{
             Database::getConnection()->query($sql);
         }
     }
-
+    //Metodo para obter um ou mais parques especificos na base de dados.
     public static function search(int $id = null, string $logo = null, string $name = null, string $description = null, string $gmaps_link = null): array{
         // crias o comando sql principal
         $sql = "SELECT id FROM park WHERE 1=1";
@@ -160,6 +164,8 @@ class Park{
         return $ret;
 
     }
+
+    //Getters e Setters para as propriedades da classe
 
     /**
      * @return int|null

@@ -9,8 +9,6 @@ class Quality{
 
     private ?string $name = null;
 
-    private ?int $value = null;
-
     public function toArray(): array{
 
         $array = array("id" => $this->id,
@@ -120,26 +118,7 @@ class Quality{
         return $ret;
 
     }
-
-    /**
-     * @return int|null
-     */
-    public function getValue(): ?int
-    {
-        return $this->value;
-    }
-
-    /**
-     * @param int|null $value
-     */
-    public function setValue(?int $value): void
-    {
-        $this->value = $value;
-    }
-
-
-
-
+    
     /**
      * @return int|null
      */
