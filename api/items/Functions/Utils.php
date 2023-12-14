@@ -45,7 +45,7 @@ class Utils {
                 $resultado = $valoresDoPark[$i] / $arrayA[$i];
                 $soma += $resultado;
             }
-            if ($soma > $valor) {
+            if ($soma >= $valor) {
                 $valor = $soma;
                 $parkIdeal = new Park($id);
             }
