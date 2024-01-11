@@ -5,6 +5,7 @@ require_once('./../../settings.php');
 // Importando classes ou funções necessárias
 use Functions\Utils;
 use Objects\RequestResponse;
+use Functions\ParkSelector;
 
 // Criando uma instância da classe RequestResponse
 $request = new RequestResponse();
@@ -26,7 +27,7 @@ if ($json == null) {
         $valoresUser = $json["valoresUser"];
 
         // Calcula o parque ideal com base nos valores do utilizador usando a função calcularParkIdeal() da classe Utils
-        $parkIdeal = Utils::calcularParkIdeal($valoresUser);
+        $parkIdeal = ParkSelector::calcularParkIdeal($valoresUser);
         if ($parkIdeal == null){
             $request->setError("Não foi possível obter o resultado!");
             $request->setIsError(true);

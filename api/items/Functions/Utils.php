@@ -1,6 +1,7 @@
 <?php
 namespace Functions;
 
+use Exception;
 use Objects\Park;
 
 class Utils {
@@ -110,3 +111,9 @@ class Utils {
         echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
     }
 }
+
+
+
+
+
+
