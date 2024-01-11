@@ -4,7 +4,11 @@
   flex-direction: column;
   padding: 46px 0 46px 51px;
 }
-
+.aviso {
+  color: #3c6e71;
+  font-weight:bold;
+  text-align:center;
+}
 .border {
   border: 3px solid #3C6E71;
   border-width: 3px;

@@ -26,8 +26,9 @@ $(document).ready(function () {
                 document.getElementById("resultadoNome").innerHTML = res.name;
             });
         } else {
+            $('#erro25modal').modal('show');
             // Display n error message or handle the case where the sum exceeds 25
-            console.log("Sum of values exceeds 25. Please adjust your input.");a
+            console.log("Sum of values exceeds 25. Please adjust your input.");
         }
     };
 

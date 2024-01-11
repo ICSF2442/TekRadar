@@ -34,7 +34,7 @@
 
 <body>
     <main>
-
+        <div class="aviso">AVISO: A soma dos pontos não pode exceder 25 valores.</div>
         <div class="border">
             <div class="background_criterio"> <label for="aluguerCusto" class="criterio">Custo de Aluguer </label>
                 <div class="range-wrap">
@@ -114,6 +114,26 @@
                     </div>
                     <div class="modal-body" id="resultadoNome">
                         ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="erro25modal" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Erro, valor excedido:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="erro">
+                        A quantidade de pontos excedeu 25.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
