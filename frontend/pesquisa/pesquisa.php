@@ -14,7 +14,7 @@
     <script src="pesquisa.js"></script>
 
     <meta charset="UTF-8" />
-    <title>TekRadar - Pesquisa</title>
+    <title>TekRadar - Pesquisar</title>
     <link rel="icon" type="image/x-icon" href="../../imagens/favicon.ico">
     <div class="header">
         <div class="div_logo_titulo">
@@ -26,7 +26,7 @@
         <div class="menu">
             <button class="equipa" onclick="location.href='../equipa/equipa.html'">A EQUIPA</button>
             <button class="parques" onclick="location.href='../listaParque/listaparques.html'">PARQUES</button>
-            <button class="pesquisa" onclick="location.href='pesquisa.php'">PESQUISA</button>
+            <button class="pesquisa" onclick="location.href='pesquisa.php'">PESQUISAR</button>
         </div>
     </div>
 
@@ -37,91 +37,73 @@
 
         <div class="border">
             <div class="background_criterio"> <label for="aluguerCusto" class="criterio">Custo de Aluguer </label>
-                <input type="range" id="aluguerCusto" name="aluguerCusto" min="1" max="5">
-                <div class="valores-range">
-                    <span class="min">1</span>
-                    <span class="mid">3</span>
-                    <span class="max">5</span>
+                <div class="range-wrap">
+                    <input type="range" id="aluguerCusto" class="range" min="1" max="5" value="1">
+                    <output class="bubble"></output>
                 </div>
             </div>
 
-            <div class="background_criterio"> <label for="infApoio" class="criterio">Apoio Informático </label>
-                <input type="range" id="infApoio" name="infApoio" min="1" max="5">
-                <div class="valores-range">
-                    <span class="min">1</span>
-                    <span class="mid">3</span>
-                    <span class="max">5</span>
+            <div class="background_criterio"> <label for="apoioInformatico" class="criterio">Apoio Informático </label>
+                <div class="range-wrap">
+                    <input type="range" id="infApoio" class="range" min="1" max="5" value="1">
+                    <output class="bubble"></output>
                 </div>
             </div>
 
             <div class="background_criterio"> <label for="salasReuniao" class="criterio">Salas de Reuniões </label>
-                <input type="range" id="salasReuniao" name="salasReuniao" min="1" max="5">
-                <div class="valores-range">
-                    <span class="min">1</span>
-                    <span class="mid">3</span>
-                    <span class="max">5</span>
+                <div class="range-wrap">
+                    <input type="range" id="salasReuniao" class="range" min="1" max="5" value="1">
+                    <output class="bubble"></output>
                 </div>
             </div>
 
             <div class="background_criterio"> <label for="parqueEstc" class="criterio">Estacionamento </label>
-                <input type="range" id="parqueEstc" name="parqueEstc" min="1" max="5">
-                <div class="valores-range">
-                    <span class="min">1</span>
-                    <span class="mid">3</span>
-                    <span class="max">5</span>
+                <div class="range-wrap">
+                    <input type="range" id="parqueEstc" class="range" min="1" max="5" value="1">
+                    <output class="bubble"></output>
                 </div>
             </div>
 
             <div class="background_criterio"> <label for="bar" class="criterio">Bar(Cantina) </label>
-                <input type="range" id="bar" name="bar" min="1" max="5">
-                <div class="valores-range">
-                    <span class="min">1</span>
-                    <span class="mid">3</span>
-                    <span class="max">5</span>
+                <div class="range-wrap">
+                    <input type="range" id="bar" class="range" min="1" max="5" value="1">
+                    <output class="bubble"></output>
                 </div>
             </div>
 
             <div class="background_criterio"> <label for="wifi" class="criterio">Rede Wifi </label>
-                <input type="range" id="wifi" name="wifi" min="1" max="5">
-                <div class="valores-range">
-                    <span class="min">1</span>
-                    <span class="mid">3</span>
-                    <span class="max">5</span>
+                <div class="range-wrap">
+                    <input type="range" id="wifi" class="range" min="1" max="5" value="1">
+                    <output class="bubble"></output>
                 </div>
             </div>
 
             <div class="background_criterio"> <label for="redeTransportes" class="criterio">Transportes </label>
-                <input type="range" id="redeTransportes" name="redeTransportes" min="1" max="5">
-                <div class="valores-range">
-                    <span class="min">1</span>
-                    <span class="mid">3</span>
-                    <span class="max">5</span>
+                <div class="range-wrap">
+                    <input type="range" id="redeTransportes" class="range" min="1" max="5" value="1">
+                    <output class="bubble"></output>
                 </div>
             </div>
 
             <div class="background_criterio"> <label for="armazem" class="criterio">Armazém </label>
-                <input type="range" id="armazem" name="armazem" min="1" max="5">
-                <div class="valores-range">
-                    <span class="min">1</span>
-                    <span class="mid">3</span>
-                    <span class="max">5</span>
+                <div class="range-wrap">
+                    <input type="range" id="armazem" class="range" min="1" max="5" value="1">
+                    <output class="bubble"></output>
                 </div>
             </div>
 
             <div class="background_criterio"> <label for="dist" class="criterio">Distância </label>
-                <input type="range" id="dist" name="dist" min="1" max="5">
-                <div class="valores-range">
-                    <span class="min">1</span>
-                    <span class="mid">3</span>
-                    <span class="max">5</span>
+                <div class="range-wrap">
+                    <input type="range" id="dist" class="range" min="1" max="5" value="1">
+                    <output class="bubble"></output>
                 </div>
             </div>
+            <button id="botaoResultado" type="button" class="calcular" data-toggle="modal"
+                data-target="#resultadoModa">CALCULAR</button></a>
         </div>
-        <button id="botaoResultado" type="button" class="calcular" data-toggle="modal" data-target="#resultadoModa">CALCULAR</button></a>
 
-
-        <!-- Modal -->
-        <div class="modal fade" id="resultadoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="resultadoModal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
